@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/com/paysonwallach/nocturnal/icons/32x32/apps">
+    <file compressed="true" preprocess="xml-stripblanks">icons/nocturnal.svg</file>
+    <file alias="nocturnal-symbolic" preprocess="xml-stripblanks">icons/symbolic/nocturnal-symbolic.svg</file>
+  </gresource>
+</gresources>
