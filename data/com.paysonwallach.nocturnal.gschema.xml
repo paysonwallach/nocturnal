@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="gnome-shell-extensions">
+  <enum id="ScheduleType">
+    <value nick='disabled' value='0'/>
+    <value nick='automatic' value='1'/>
+    <value nick='manual' value='2'/>
+  </enum>
+
+  <!-- <enum id="ColorSchemes"> <value nick='no-preference' value='0'/> <value nick='dark' value='1'/> <value nick='light' value='2'/> </enum> -->
+
+  <schema path="/com/paysonwallach/nocturnal/" id="com.paysonwallach.nocturnal">
+    <key type="b" name="gtk-theme">
+      <default>true</default>
+      <summary>Toggle Gtk theme</summary>
+    </key>
+    <key type="s" name="light-gtk-theme">
+      <default>"Adwaita"</default>
+      <summary>Light Gtk theme</summary>
+    </key>
+    <key name="dark-gtk-theme" type="s">
+      <default>"Adwaita-dark"</default>
+      <summary>Dark Gtk theme</summary>
+    </key>
+    <!-- <key enum="ColorScheme" name="color-scheme-preference"> <default>'no-preference'</default> <summary></summary> <description></description> </key> -->
+    <key enum="ScheduleType" name="schedule">
+      <default>'disabled'</default>
+      <summary>Algorithm for prefer dark schedule</summary>
+      <description>Choose the algorithm used for prefer dark schedule.</description>
+    </key>
+    <key type="d" name="schedule-from-time">
+      <default>20.0</default>
+      <summary>The start time</summary>
+      <description></description>
+    </key>
+    <key type="d" name="schedule-to-time">
+      <default>6.0</default>
+      <summary>The stop time</summary>
+      <description></description>
+    </key>
+    <key type="(dd)" name="last-coordinates">
+      <default>(91,181)</default>
+      <summary>The last detected position</summary>
+      <description>When location services are available this represents the last detected location. The default value is an invalid value to ensure it is always updated at startup.</description>
+    </key>
+    <!--<key name="light-shell-theme" type="s"> <default>"Adwaita"</default> <summary>Light shell theme</summary> </key> <key name="dark-shell-theme" type="s"> <default>"Adwaita-dark"</default> <summary>Dark shell theme</summary> </key> <key name="light-wallpaper-path" type="s"> <default>""</default> <summary>Absolute path of the light theme's wallpaper</summary> </key> <key name="dark-wallpaper-path" type="s"> <default>""</default> <summary>Absolute path of the dark theme's wallpaper</summary> </key>-->
+  </schema>
+</schemalist>
